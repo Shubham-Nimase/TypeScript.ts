@@ -1,0 +1,21 @@
+function SecondMax() {
+    var a = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        a[_i] = arguments[_i];
+    }
+    var temp = 0;
+    for (var i = 0; i < a.length; i++) {
+        for (var j = i + 1; j < a.length; j++) {
+            if (a[i] > a[j]) {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    console.log(a_size);
+    return (a[a.length - 2]);
+}
+var result = 0;
+result = SecondMax(100, 23, 89, 6, 29, 560, 45, 77, 32);
+console.log("Second Maximum number is=" + result);
